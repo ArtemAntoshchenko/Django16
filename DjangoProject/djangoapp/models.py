@@ -13,3 +13,12 @@ class Books(models.Model):
         ('horror', 'Horror'),
         ('non-fiction', 'Non-Fiction'),
         ])
+    
+class Company(models.Model):
+    name=models.CharField()
+
+class Product(models.Model):
+    com=models.ForeignKey(Company, on_delete=models.CASCADE)
+    name=models.CharField()
+    price=models.IntegerField()
+

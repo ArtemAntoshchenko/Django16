@@ -20,5 +20,9 @@ from djangoapp import views
 
 urlpatterns = [
     path('', views.index),
-    path('filter',views.filter, name='filter')
+    path('filter',views.filter, name='filter'),
+    path('index',views.index1),
+    path('index_create',views.index_create),
+    path('index_create_product',views.index_create_product, name='product'),
+
 ]
